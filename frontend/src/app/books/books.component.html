@@ -1,0 +1,28 @@
+<p>books works!</p>
+
+<ng-container *ngIf="!logged">
+    <h2>Login Form</h2>
+    <div>
+      <fieldset>
+        <label>Email: </label>
+        <input type="text" [(ngModel)]="mail">
+      </fieldset>
+      <fieldset>
+        <label>Password: </label>
+        <input type="password" [(ngModel)]="password">
+      </fieldset>
+      <button (click)="auth()">Login</button>
+    </div>
+</ng-container>
+<ng-container *ngIf="logged">
+  <button (click)="createBook()">Add book</button>
+</ng-container>
+
+
+<div *ngFor="let book of books">
+
+ <!--   <p><a [routerLink]="['/companies', company.name ]"> {{ company.name }} </a> </p> -->
+    <p> <a [routerLink]="['/books', book.id ]"> {{ book.name }} {{ book.price }} </a> </p>
+    <img src={{book.pic}} style="width:200px;height:200px;"/>
+</div>
+<router-outlet></router-outlet>

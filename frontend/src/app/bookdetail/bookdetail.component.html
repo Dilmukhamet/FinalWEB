@@ -1,0 +1,36 @@
+<p>bookdetail works!</p>
+
+
+<div *ngIf="book">
+    <h3><b>{{ book.name }}</b></h3>
+    <p>{{ book.author  }}</p>
+    <p>{{ book.price }}</p>
+    <img src={{book.pic}} style="width:200px;height:200px;"/>
+
+  </div>
+  <br>
+<p><b>List of Comment</b> </p>
+
+<div *ngFor="let comment of comments">
+    <p> {{ comment.text  }} {{ comment.rating }} </p>
+</div>
+
+<br>
+  <h2>Leave Comment</h2>
+  <div>
+    <fieldset>
+      <label>Comment: </label>
+      <input type="Comment" [(ngModel)]="text">
+    </fieldset>
+
+<br>
+    <fieldset>
+      <label>Rating: </label>
+      <input type="Rating" [(ngModel)]="rating">
+    </fieldset>
+
+<br>
+    <button (click)="comment(text, rating, book_id)">commend</button>
+  </div>
+  <br>
+  <button (click)="purchase()">Buy book</button>

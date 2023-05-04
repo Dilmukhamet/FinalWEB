@@ -1,0 +1,25 @@
+<h1>Book Store</h1>
+<button (click)="exit()">Log out</button>
+<!--<ng-container *ngIf="!logged">
+  <h2>Login Form</h2>
+  <div>
+    <fieldset>
+      <label>Email: </label>
+      <input type="text" [(ngModel)]="mail">
+    </fieldset>
+    <fieldset>
+      <label>Password: </label>
+      <input type="password" [(ngModel)]="password">
+    </fieldset>
+    <button (click)="auth()">Login</button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!logged">-->
+<nav>
+  <ul>
+    
+    <li><a routerLink="/books" routerLinkActive="active" ariaCurrentWhenActive="page">Book Component</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

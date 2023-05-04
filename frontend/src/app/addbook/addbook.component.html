@@ -1,0 +1,38 @@
+<p>addbook works!</p>
+
+<h2>Adding Book</h2>
+<div>
+  <fieldset>
+    <label>Name: </label>
+    <input type="text" [(ngModel)]="name">
+  </fieldset>
+  <br>
+  <fieldset>
+    <label>Author: </label>
+    <input type="text" [(ngModel)]="author">
+  </fieldset><br>
+  <fieldset>
+    <label>Price: </label>
+    <input type="number" [(ngModel)]="price">
+  </fieldset><br>
+  <fieldset>
+    <label>Pic: </label>
+    <input type="text" [(ngModel)]="pic">
+  </fieldset><br>
+
+  <fieldset>
+    <label>Genre: </label>
+    <input type="text" [(ngModel)]="pic">
+  </fieldset><br>
+<!--
+  <select formControlName="genreList" class="form-control">
+    <option disabled>Chose genre</option>
+    <option>Choose Genre</option>
+    <option *ngFor="let genre of genres">{{ genre.name }}</option>
+</select>
+-->
+<br><br>
+
+
+  <button (click)="createBook(name, author, price, pic, genre_id)">Add book</button>
+</div>
